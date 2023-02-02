@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "singularName": "country",
+    "pluralName": "countries",
+    "displayName": "country",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "capital": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "emoji": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "continent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::continent.continent",
+      "inversedBy": "countries"
+    }
+  }
+}

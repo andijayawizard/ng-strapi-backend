@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "continents",
+  "info": {
+    "singularName": "continent",
+    "pluralName": "continents",
+    "displayName": "continent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country",
+      "mappedBy": "continent"
+    }
+  }
+}
